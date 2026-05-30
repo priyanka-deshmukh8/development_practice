@@ -21,10 +21,10 @@ app.post("/signup", function (req, res) {
     });
 });
 
-app.post("/login", function (req, res) {
+app.post("/login", async function (req, res) {
     const email = req.body.email;
     const password = req.body.password;
-    const user = UserModel.findOne({
+    const user = await UserModel.findOne({
         email: email,
         password: password 
     });
