@@ -1,5 +1,6 @@
 const express = require('express');
 const { UserModel, TodoModel } = require('./db');
+const jwt = require('jsonwebtoken');
 
 const app = express();  
 
@@ -28,8 +29,13 @@ app.post("/login", function (req, res) {
         password: password 
     });
     if (user) {
+        const token = jwt.sign({
+            id: user.id,
+            email: user.email
+        }, "secret");
         res.json({
-            message: "You are logged in!"
+            message: "You are logged in!",
+            token: token
         });
     } else {
         res.json({
