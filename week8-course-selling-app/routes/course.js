@@ -1,0 +1,1 @@
+function createCourseRoutes(app)

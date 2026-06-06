@@ -1,5 +1,5 @@
 {
-  "name": "week7",
+  "name": "week8-course-selling-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.6.3"
-  }
+  "description": ""
 }
